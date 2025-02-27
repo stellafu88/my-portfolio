@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-purple-950">
@@ -6,7 +8,7 @@ export default function About() {
 
         <div className="flex flex-col md:flex-row items-center gap-8">
           <div>
-            <img
+            <Image
               src="/bike.jpg"
               alt="Profile"
               width={500}
@@ -16,7 +18,7 @@ export default function About() {
           </div>
           <div>
             <p className="text-lg">
-              I'm a Full-Stack Software Engineer with 3 years of experience
+              I&apos;m a Full-Stack Software Engineer with 3 years of experience
               developing scalable web applications in New Zealand. I recently
               relocated to Melbourne, Australia. I love building responsive and
               user-friendly websites, passionate about creating solutions to

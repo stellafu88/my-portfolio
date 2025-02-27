@@ -1,10 +1,12 @@
+import Image from 'next/image'
+
 export default function Projects() {
   const projects = [
     {
       title: "Tips for Financial Cybersecurity",
       description:
         "A responsive website built with HTML and CSS, leveraging these languages to create and style a responsive web page adhering to specific branding guidelines. This is a job simulation involving web development and cybersecurity for a banking Software Engineering Program, including foundational knowledge in financial cybersecurity principles and web hosting security measures.",
-      image: "/tips.jpg",
+      image: "/cyberTips.jpg",
       link: "https://github.com/stellafu88/CommBank-IntroSoftwareEngineering-JobSimulation/blob/main/index.html/",
     },
     {
@@ -23,11 +25,15 @@ export default function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-purple-900 p-6 rounded-lg shadow-lg">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-lg mb-4"
-              />
+              <div className="relative aspect-video w-full mb-4">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover rounded-lg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
               <h3 className="text-2xl font-bold">{project.title}</h3>
               <p className="mt-2">{project.description}</p>
 

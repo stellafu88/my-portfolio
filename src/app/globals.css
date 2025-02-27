@@ -23,3 +23,7 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.aspect-video {
+  aspect-ratio: 12 / 9;
+}
