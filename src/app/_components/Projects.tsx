@@ -19,7 +19,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-purple-950">
       <div className="container mx-auto p-4">
-        <h2 className="text-4xl font-bold text-center mb-8">My Projects</h2>
+        <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="bg-purple-900 p-6 rounded-lg shadow-lg">
