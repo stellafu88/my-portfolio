@@ -28,7 +28,7 @@ export default function Hero() {
       </div>
 
       <div className="text-center">
-        <h1 className="text-6xl font-bold">Hi, I'm Stella (Jiani) Fu</h1>
+        <h1 className="text-6xl font-bold">Hi, I&apos;m Stella (Jiani) Fu</h1>
         <p className="text-2xl mt-4">
           A Passionate and Result-Oriented Web Developer building Websites and
           Web Applications
