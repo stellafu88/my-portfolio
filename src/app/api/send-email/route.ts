@@ -84,6 +84,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid content" }, { status: 400 });
     }
 
+    console.log("---process.env.EMAIL_USER:", process.env.EMAIL_USER);
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
