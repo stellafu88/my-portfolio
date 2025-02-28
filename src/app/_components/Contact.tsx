@@ -49,7 +49,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-purple-900">
+    <section id="contact" className="py-20 bg-purple-400/10">
       <div className="container mx-auto p-4">
         <h2 className="text-4xl font-bold text-center mb-8">Contact Me</h2>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
@@ -62,7 +62,7 @@ export default function Contact() {
               setFormData((prev) => ({ ...prev, name: e.target.value }))
             }
             required
-            className="w-full p-3 mb-4 rounded-lg bg-purple-950 text-white"
+            className="w-full p-3 mb-4 rounded-lg bg-white text-black"
           />
           <input
             type="email"
@@ -73,7 +73,7 @@ export default function Contact() {
               setFormData((prev) => ({ ...prev, email: e.target.value }))
             }
             required
-            className="w-full p-3 mb-4 rounded-lg bg-purple-950 text-white"
+            className="w-full p-3 mb-4 rounded-lg bg-white text-black"
           />
           <textarea
             name="message"
@@ -84,13 +84,13 @@ export default function Contact() {
             }
             required
             rows={5}
-            className="w-full p-3 mb-4 rounded-lg bg-purple-950 text-white"
+            className="w-full p-3 mb-4 rounded-lg bg-white text-black"
           ></textarea>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-purple-400 text-white font-bold px-6 py-3 rounded-lg hover:bg-pink-400 transition-colors"
+            className="w-full bg-purple-500 text-white font-bold px-6 py-3 rounded-lg hover:bg-purple-400/60 transition-all transform hover:scale-105"
           >
             {isLoading ? "Sending..." : "Send Message"}
           </button>

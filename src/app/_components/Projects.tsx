@@ -19,12 +19,12 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-purple-950">
+    <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto p-4">
         <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-purple-900 p-6 rounded-lg shadow-lg">
+            <div key={index} className="bg-purple-400/10 p-6 rounded-lg shadow-lg">
               <div className="relative aspect-video w-full mb-4">
                 <Image
                   src={project.image}
@@ -39,7 +39,7 @@ export default function Projects() {
 
               <a
                 href={project.link}
-                className="cursor-pointer mt-8 inline-block bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-400 transition-colors"
+                className="cursor-pointer mt-8 inline-block bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-400/60 transition-all transform hover:scale-105"
               >
                 View Project
               </a>
