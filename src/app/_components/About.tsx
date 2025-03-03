@@ -17,7 +17,7 @@ export default function About() {
             />
           </div>
           <div>
-            <p className="text-lg">
+            <p className="text-xl">
               I&apos;m a Full-Stack Software Engineer with 3 years of experience
               developing scalable web applications in New Zealand. I recently
               relocated to Melbourne, Australia. I love building responsive and

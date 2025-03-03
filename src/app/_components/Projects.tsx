@@ -1,7 +1,14 @@
-import Image from 'next/image'
+import Image from "next/image";
+
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+};
 
 export default function Projects() {
-  const projects = [
+  const projects: Project[] = [
     {
       title: "Tips for Financial Cybersecurity",
       description:
@@ -24,22 +31,24 @@ export default function Projects() {
       link: "https://github.com/stellafu88/Wholey-Moley-foods/blob/main/The%20ERD%20Diagram.png",
     },
     {
-      title: "My Portfolio",
+      title: "My Portfolio - The current website",
       description:
         "A responsive website built with Next.js, Tailwind CSS, React and TypeScript. It is deployed on Vercel.",
-      image: "/diagram.jpg",
-      link: "https://github.com/stellafu88/Wholey-Moley-foods/blob/main/The%20ERD%20Diagram.png",
-    }
+      image: "/portfolio.jpg",
+    },
   ];
 
   return (
     <section id="projects" className="py-20 bg-white pt-[15vh]">
       <div className="container mx-auto p-4">
         <h2 className="text-4xl font-bold text-center mb-8">Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="flex flex-col gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="bg-purple-400/10 p-6 rounded-lg shadow-lg">
-              <div className="relative aspect-video w-full mb-4">
+            <div
+              key={index}
+              className="bg-purple-400/10 p-6 rounded-lg shadow-lg flex flex-col md:flex-row gap-16"
+            >
+              <div className="relative aspect-video md:w-1/2">
                 <Image
                   src={project.image}
                   alt={project.title}
@@ -48,15 +57,22 @@ export default function Projects() {
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
               </div>
-              <h3 className="text-2xl font-bold">{project.title}</h3>
-              <p className="mt-2">{project.description}</p>
-
-              <a
-                href={project.link}
-                className="cursor-pointer mt-8 inline-block bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-400/60 transition-all transform hover:scale-105"
-              >
-                View Project
-              </a>
+              <div className="md:w-1/2 flex flex-col gap-6 self-center">
+                <div>
+                  <h3 className="text-2xl font-bold">{project.title}</h3>
+                  <p className="text-xl mt-2">{project.description}</p>
+                </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cursor-pointer inline-block bg-purple-500 text-white font-semibold px-6 py-3 rounded-lg hover:bg-purple-400/60 transition-all transform hover:scale-105 w-fit"
+                  >
+                    View Project
+                  </a>
+                )}
+              </div>
             </div>
           ))}
         </div>
